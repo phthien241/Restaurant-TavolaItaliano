@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Carousel, initTE} from 'tw-elements';
+import {Carousel, initTE,Ripple, Input} from 'tw-elements';
 
 @Component({
   selector: 'app-homepage',
@@ -8,6 +8,6 @@ import {Carousel, initTE} from 'tw-elements';
 })
 export class HomepageComponent {
   ngOnInit() {
-    initTE({ Carousel });
+    initTE({ Carousel,Ripple, Input });
   }
 }
