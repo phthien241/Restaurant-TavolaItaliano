@@ -13,13 +13,21 @@ const Food = sequelize.define('food',{
         type: Sequelize.STRING,
         allowNull: false
     },
-    description:{
+    description : {
         type:Sequelize.STRING,
         allowNull: false
     },
+    price : {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
     isValid: Sequelize.BOOLEAN,
+    course: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     imageUrl:{
-        type:Sequelize.STRING,
+        type: Sequelize.STRING,
         allowNull: false
     }
 })

@@ -8,7 +8,7 @@ import { MenuService } from 'src/app/services/menu.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  private food: Food[] = [];
+  food: Food[] = [];
   constructor(private menuService: MenuService){}
   ngOnInit(): void {
       this.menuService.getMenu();

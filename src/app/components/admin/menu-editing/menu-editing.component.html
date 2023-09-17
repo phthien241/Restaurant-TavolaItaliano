@@ -1,1 +1,38 @@
-<p>menu-editing works!</p>
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Add Food
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form action="" #form = "ngForm" (ngSubmit)="onSubmitForm(form)">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput name="title" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Course</mat-label>
+            <mat-select name = "course" ngModel>
+                <mat-option value="appetizer">Appetizer</mat-option>
+                <mat-option value="main">Main Dish</mat-option>
+                <mat-option value="dessert">Dessert</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Price</mat-label>
+            <input matInput name="price" ngModel>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Available</mat-label>
+            <mat-select name = "available" ngModel>
+                <mat-option value="A">Available</mat-option>
+                <mat-option value="NA">N/A</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <textarea rows="5" matInput name="description" ngModel></textarea>
+        </mat-form-field>
+        <input type="file" name="image" (change)="onFileChange($event)" accept="image/*">
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </mat-expansion-panel>

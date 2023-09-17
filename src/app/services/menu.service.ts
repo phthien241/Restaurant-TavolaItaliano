@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Food } from '../models/food.model';
 import { Subject, map } from 'rxjs';
+import { response } from 'express';
 
 @Injectable({
   providedIn: 'root'
@@ -18,13 +19,21 @@ export class MenuService {
           id : food.id,
           title : food.title,
           description: food.description,
+          price: food.price,
           isValid: food.isValid,
           imageUrl: food.imageUrl
         }
       })
     })).subscribe(transformedData=>{
       this.food = transformedData;
+      console.log(this.food[0].imageUrl);
       this.foodUpdated.next([...this.food]);
+    })
+  }
+
+  addMenu(food: any){
+    this.http.post<{message:string}>("http://localhost:3000/api/menu/add-menu",food).subscribe(response=>{
+      console.log(response.message);
     })
   }
 

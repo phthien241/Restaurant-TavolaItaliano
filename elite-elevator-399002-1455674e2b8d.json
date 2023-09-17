@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "elite-elevator-399002",
+  "private_key_id": "1455674e2b8dadcfcf71bc1508c634b876e392a9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCkrpNv6y5ZbNu8\n73SuIyfK77wl2trY/i0TDdssWazoZAi7SIECT2og4zRAE2lZp1a7Bvd1wRrM/i7Q\n6geRvS3DptsINmVcE5qMlnLLXYRb3O6QQSVtbg3lk9b1VKy+VoGafYdWPI+abdoD\nBdRATajQ4WG9lQxelUYPB+svcYd7Je9eraNxQj42aFxAB0h35LZ0BF0L7Ikpionp\nWwQ3ICf17JG1dlEjYVuCEan7G3yzLBwzMR9VY/tk3wUAyN+1k7NDh11Ajrv+rSFd\nyqM04pfOO9xeICggkmfZJTReJ/T0bt+/bIKiv1lBilIbdPiOf0j3yguPL7ZQ/Grt\nzwIhX945AgMBAAECggEACuTvpP5CbTEJ4lhW+DQkLEUqxbhSNPuvoKyQfMEb8q23\ndChKPIxjYXSWXszJ8d/jmXDPCw+wxbHlB/YLdSU2M1TE9aifkPVNCpLjWjfAC1G0\nyH8+yhv3OGJM3KLy4I6ZeU5nlxlfiKBOxVdr4KsiiVr3m9KR5Gnsng7wjI1uoINZ\nFe5mR4wsYHvbvOzk7mCtyEhyLmvabh8iKcaZ44GQklKuTgkg4p93cvgm2OyRjpfD\nN2g6MGGBl+8mdY/p37oTYsGuOioHoZTsboiYFf4GCZhkCjoPZf0OUwsShGFPe1wK\nswzhw9LSyDtGrqcq5UOU6sL9cLyAQgvo6NhmHIkuxwKBgQDmwroG5LRcrdZs8lOk\n2tQjI7lVq074ds/+UHbcsX0WJfZaVpSZZNBVvKpKiIpGARkDyslJHPAvlwjQQZzB\njNgk269jjKDdC0xMvST1DA/wEpppYUHY/zXLCGw9KZYGxlTdUfRmbBGiZnlDjXx7\nGAFgSytMLrYpB0q93op3ONYylwKBgQC2sacDvMx5xyV7K4j00TJ1jlaiPK7f+ITa\nueIT+JNUMDGy8a1vmmihPydRNm6zmdEXc/tzGmK7oOqzqBeh05baBpazD9I/sXpl\ntaMTPlbUv+LlLbHWyfHdrEvfPCNm3Oj3lkQhQAC6iv6yvXQh6fXaXVMvOpHhOI91\n7IAJESUfrwKBgAzdso2L1tqL/raYVD2OzeEfrseuA3sq9LHTPq1TYAwKFdA3n5Vl\n34/IMx5wunTovsJNXiera2Db5OvnnJvWBH8ZmI/OWXG5nYlxyku3XnQeNWnGuGsm\n35LwZ0iJtwmtqTGlziCfyePqHry7eMNMNVdvGXzn5dQnye0IKWQ4UQkFAoGAbXfT\ncEzfZJSsY7o5TSBQkNniFUIxMqixynGZAohulwJttSBU4MtvqDa0M1hfSqR/AgOQ\nBm8n++820sGEr4WeHTPXdqGjRGDuyyTj+vLeiooTxWj055OHpmDH8ZISUF9MBJZ4\nakf0Z9JDPQyCGpQaqWZEIseAg6glZe545XXtfacCgYEAy96rMKs0b8Yth63Eutq4\nQ7fToEFinphbwscWt0845Gg+C3vd6ybSEwn/PlPx2IQPJNQ8Sn4RwYRkfWfG1+kT\nlf1f0hLBqxOTQygeggcHqBDxRfPff0M8m+BaAOrbSW4ufn9q11F60mYN4VXl4XQt\nAVoZqFysEzspRh+1t5dyfbg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "tavola-italiano@elite-elevator-399002.iam.gserviceaccount.com",
+  "client_id": "113726881948553857257",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tavola-italiano%40elite-elevator-399002.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
