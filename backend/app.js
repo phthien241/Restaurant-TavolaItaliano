@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const food = require("./models/food")
 const foodRoutes = require("./routes/food")
+const reservation = require("./models/reservation")
+const user = require("./models/user")
 const sequelize = require("./database");
 
 const app = express();

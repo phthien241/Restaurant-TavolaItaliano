@@ -24,6 +24,9 @@ const routes: Routes = [
   },
   {
     path: "reservationmanagement", loadChildren: () => import('./components/admin/management/reservation-management/reservation-management.module').then(m => m.ReservationManagementModule)
+  },
+  {
+    path: "reservationhistory", loadChildren: () => import('./components/users/reservation-history/reservation-history.module').then(m => m.ReservationHistoryModule)
   }
 ];
 
