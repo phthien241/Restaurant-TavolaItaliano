@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Food } from 'src/app/models/food.model';
 import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
@@ -31,7 +30,6 @@ export class MenuEditingComponent {
     formData.append("isValid", isValid);
     formData.append("course", form.value.course);
     formData.append("image", this.image);
-    // let food = {title: form.value.title, description: form.value.description, price: +form.value.price, isValid: isValid, course: form.value.course, imageUrl: this.image}
     this.menuService.addMenu(formData);
 
   }

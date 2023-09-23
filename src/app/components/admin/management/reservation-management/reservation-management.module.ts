@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { ReservationManagementComponent } from './reservation-management.component';
 import {MatListModule} from '@angular/material/list';
 import { ReservationManagementRoutingModule } from './reservation-management-routing.module';
@@ -23,6 +23,7 @@ import { MatInputModule } from '@angular/material/input';
     MatNativeDateModule,
     MatDatepickerModule,
     MatInputModule
-  ]
+  ],
+  providers: [DatePipe]
 })
 export class ReservationManagementModule { }

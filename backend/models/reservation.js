@@ -32,7 +32,7 @@ const Reservation = sequelize.define('reservation',{
     time:{
         type: Sequelize.TIME,
         allowNull: false
-    },
+    }
 })
 
 module.exports = Reservation;

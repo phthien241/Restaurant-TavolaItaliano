@@ -274,11 +274,11 @@
             </div>
             <div
             class="signup-form block max-w-md rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-            <form>
+            <form #form = "ngForm" (ngSubmit)="signUp(form)">
                 <div class="grid grid-cols-2 gap-4">
                     <!--First name input-->
                     <div class="relative mb-6" data-te-input-wrapper-init>
-                        <input type="text"
+                        <input type="text" name="firstName" ngModel
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="exampleInput123" aria-describedby="emailHelp123" placeholder="First name" />
                         <label for="emailHelp123"
@@ -289,7 +289,7 @@
     
                     <!--Last name input-->
                     <div class="relative mb-6" data-te-input-wrapper-init>
-                        <input type="text"
+                        <input type="text" name="lastName" ngModel
                             class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="exampleInput124" aria-describedby="emailHelp124" placeholder="Last name" />
                         <label for="exampleInput124"
@@ -301,7 +301,7 @@
     
                 <!--Email input-->
                 <div class="relative mb-6" data-te-input-wrapper-init>
-                    <input type="email"
+                    <input type="email" name="email" ngModel
                         class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                         id="exampleInput125" placeholder="Email address" />
                     <label for="exampleInput125"
@@ -312,7 +312,7 @@
     
                 <!--Password input-->
                 <div class="relative mb-6" data-te-input-wrapper-init>
-                    <input type="password"
+                    <input type="password" name="password" ngModel
                         class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                         id="exampleInput126" placeholder="Password" />
                     <label for="exampleInput126"

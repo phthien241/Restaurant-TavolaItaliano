@@ -26,7 +26,6 @@ export class MenuService {
       })
     })).subscribe(transformedData=>{
       this.food = transformedData;
-      console.log(this.food[0].imageUrl);
       this.foodUpdated.next([...this.food]);
     })
   }

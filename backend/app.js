@@ -5,7 +5,9 @@ const cors = require("cors");
 const food = require("./models/food")
 const foodRoutes = require("./routes/food")
 const reservation = require("./models/reservation")
+const reservationRoutes = require("./routes/reservation")
 const user = require("./models/user")
+const userRoutes = require("./routes/user")
 const sequelize = require("./database");
 
 const app = express();
@@ -20,5 +22,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/api/menu",foodRoutes);
-
+app.use("/api/user",userRoutes);
+app.use("/api/reservation", reservationRoutes);
 module.exports = app;

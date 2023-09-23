@@ -14,7 +14,6 @@ export class MenuComponent implements OnInit {
       this.menuService.getMenu();
       this.menuService.getFoodUpdatedListener().subscribe((food: Food[])=>{
         this.food = food;
-        console.log(this.food[0].title);
       })
   }
 }

@@ -1,43 +1,28 @@
-<!-- component -->
 <div class="flex items-center justify-center p-12">
     <div class="mx-auto w-full max-w-[550px]">
-        <form action="#">
-            <div class="-mx-3 flex flex-wrap">
-                <div class="w-full px-3 sm:w-1/2">
-                    <div class="mb-5">
-                        <label for="fName" class="mb-3 block text-base font-medium text-[#07074D]">
-                            First Name
-                        </label>
-                        <input type="text" name="fName" id="fName" placeholder="First Name"
-                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                    </div>
-                </div>
-                <div class="w-full px-3 sm:w-1/2">
-                    <div class="mb-5">
-                        <label for="lName" class="mb-3 block text-base font-medium text-[#07074D]">
-                            Last Name
-                        </label>
-                        <input type="text" name="lName" id="lName" placeholder="Last Name"
-                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                    </div>
-                </div>
+        <form #form = "ngForm" (ngSubmit)="onSubmit(form)">
+            <div class="mb-5">
+                <label for="name" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Name
+                </label>
+                <input required ngModel type="text" name="name" id="guest" placeholder="Your name"
+                    class="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
             </div>
             <div class="mb-5">
                 <label for="guest" class="mb-3 block text-base font-medium text-[#07074D]">
                     How many guest are you bringing?
                 </label>
-                <input type="number" name="guest" id="guest" placeholder="0" min="0"
+                <input required ngModel type="number" name="guest" id="guest" placeholder="0" min="0"
                     class="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
             </div>
             <div>
                 <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select branch</label>
-                <select id="countries"
+                <select name="branch" ngModel id="countries" required
                     class="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
                     <option selected>Choose a branch</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
+                    <option value="Haymarket">Haymarket</option>
+                    <option value="Central">Central</option>
+                    <option value="Darling Harbour">Darling Harbour</option>
                 </select>
             </div>
             <div class="-mx-3 flex flex-wrap">
@@ -46,7 +31,7 @@
                         <label for="date" class="mb-3 block text-base font-medium text-[#07074D]">
                             Date
                         </label>
-                        <input type="date" name="date" id="date"
+                        <input required ngModel [min]="today" type="date" name="date" id="date"
                             class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                     </div>
                 </div>
@@ -55,14 +40,14 @@
                         <label for="time" class="mb-3 block text-base font-medium text-[#07074D]">
                             Time
                         </label>
-                        <input type="time" name="time" id="time"
-                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                        <input required [min]="currentTime" type="time" name="time"ngModel id="time"
+                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"/>
                     </div>
                 </div>
             </div>
 
             <div>
-                <button
+                <button type="submit"
                     class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
                     Submit
                 </button>
