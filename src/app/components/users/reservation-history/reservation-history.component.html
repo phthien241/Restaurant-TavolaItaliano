@@ -1,1 +1,29 @@
-<p>reservation-history works!</p>
+<mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Upcoming
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-list>
+        <mat-list-item *ngFor="let reservation of reservations">
+            <span matListItemTitle>{{reservation.name}}</span>
+            <span matListItemLine>{{reservation.date | date: 'YYYY-MM-dd'}}</span>
+            <span matListItemLine>{{reservation.time}}</span>
+            <span matListItemLine>{{reservation.size}}</span>
+            <span matListItemLine>{{reservation.branch}}</span>
+            <br>
+            <hr>
+        </mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Expired
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-list>
+
+    </mat-list>
+  </mat-expansion-panel>
+

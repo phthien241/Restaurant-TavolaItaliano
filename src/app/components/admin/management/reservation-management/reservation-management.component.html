@@ -1,8 +1,7 @@
 <div>
     <mat-form-field>
         <mat-label>Choose a date</mat-label>
-        <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker">
-        <mat-hint>MM/DD/YYYY</mat-hint>
+        <input [(ngModel)]="selectedDate" matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" (dateChange)="dateChanged()">
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -10,11 +9,11 @@
 <div>
     <mat-form-field>
         <mat-label>Select a branch</mat-label>
-        <mat-select>
+        <mat-select [(ngModel)]="branch" (selectionChange)="dateChanged()">
             <mat-option>All</mat-option>
-            <mat-option value="option1">Haymarket</mat-option>
-            <mat-option value="option2">Central</mat-option>
-            <mat-option value="option3">Darling Habour</mat-option>
+            <mat-option value="Haymarket">Haymarket</mat-option>
+            <mat-option value="Central">Central</mat-option>
+            <mat-option value="Darling Habour">Darling Habour</mat-option>
         </mat-select>
     </mat-form-field>
 </div>

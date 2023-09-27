@@ -10,7 +10,8 @@ import { response } from 'express';
 export class MenuService {
   private food: Food[] = [];
   private foodUpdated = new Subject<Food[]>();
-
+  private dish: any;
+  private dishUpdated = new Subject<any>();
   constructor(private http: HttpClient) { }
   getMenu(){
     this.http.get<{food:any}>("http://localhost:3000/api/menu").pipe(map(data=>{
@@ -30,6 +31,15 @@ export class MenuService {
     })
   }
 
+  getFoodInformation(food: string){
+    this.http.post<{food:any}>("http://localhost:3000/api/menu/food",{food: food}).subscribe({
+      next: response=>{
+        this.dish = response
+        this.dishUpdated.next(this.dish);
+      }
+    })
+  }
+
   addMenu(food: any){
     this.http.post<{message:string}>("http://localhost:3000/api/menu/add-menu",food).subscribe(response=>{
       console.log(response.message);
@@ -38,6 +48,10 @@ export class MenuService {
 
   getFoodUpdatedListener(){
     return this.foodUpdated.asObservable();
+  }
+
+  getDishUpdatedListener(){
+    return this.dishUpdated.asObservable();
   }
 
 }

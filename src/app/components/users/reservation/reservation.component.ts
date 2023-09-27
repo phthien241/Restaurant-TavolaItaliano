@@ -17,7 +17,7 @@ export class ReservationComponent {
   }
 
   onSubmit(form:NgForm){
-    let reservation = {name: form.value.name, size: form.value.guest, branch : form.value.branch, date: form.value.date, time : form.value.time}
+    let reservation = {name: form.value.name, size: form.value.guest, branch : form.value.branch, date: form.value.date, time : form.value.time, email: localStorage.getItem("email")}
     this.reservationService.makeReservation(reservation);
 
   }

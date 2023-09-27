@@ -8,6 +8,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+
 
 
 @NgModule({
@@ -22,8 +25,11 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    MatMomentDateModule
   ],
-  providers: [DatePipe]
+  providers: [DatePipe,
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } }]
 })
 export class ReservationManagementModule { }

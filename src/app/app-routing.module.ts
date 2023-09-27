@@ -8,7 +8,10 @@ const routes: Routes = [
     path: "menu", loadChildren: () => import('./components/menu/menu.module').then(m => m.MenuModule)
   },
   {
-    path: "admin", loadChildren: () => import('./components/admin/menu-editing/menu-editing.module').then(m => m.MenuEditingModule)
+    path: "admin/menu/add", loadChildren: () => import('./components/admin/menu-editing/menu-editing.module').then(m => m.MenuEditingModule)
+  },
+  {
+    path: "admin/menu/edit/:food", loadChildren: () => import('./components/admin/menu-editing/menu-editing.module').then(m => m.MenuEditingModule)
   },
   {
     path: "admin/login", loadChildren: () => import('./components/admin/login/login.module').then(m => m.LoginModule)

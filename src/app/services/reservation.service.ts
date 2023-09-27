@@ -12,12 +12,34 @@ export class ReservationService {
   constructor(private http: HttpClient) { }
 
   getReservation(){
-    console.log("haha")
     this.http.get<any[]>("http://localhost:3000/api/reservation/get-reservation").subscribe({
       next: response=>{
         this.reservation = [...response];
       },
       complete: ()=>{
+        this.reservationUpdated.next([...this.reservation]);
+      }
+    })
+  }
+
+  getReservationDate(date: Date, branch: string){
+    let dateFilter = (date!=null) ? date.toISOString() : null;
+    this.http.post<any[]>("http://localhost:3000/api/reservation/get-reservation-filter",{date:dateFilter, branch: branch}).subscribe({
+      next: response=>{
+        this.reservation = [...response];
+      },
+      complete: ()=>{
+        this.reservationUpdated.next([...this.reservation]);
+      }
+    })
+  }
+
+  getReservationUser(email:string){
+    this.http.post<any[]>("http://localhost:3000/api/reservation/get-reservation-user",{email:email}).subscribe({
+      next: response=>{
+        this.reservation = [...response]
+      },
+      complete:()=>{
         this.reservationUpdated.next([...this.reservation]);
       }
     })
@@ -30,9 +52,9 @@ export class ReservationService {
   makeReservation(reservation: any) {
     this.http.post<{message:string}>("http://localhost:3000/api/reservation/make-reservation", reservation).subscribe({
       next: response => {
-        console.log(console.log(response.message))
+        console.log(response.message);
       }, error: err => {
-        console.log(console.log(err.error.message))
+        console.log(err.error.message)
       },
       complete: () => {
 

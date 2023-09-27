@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReservationHistoryComponent } from './reservation-history.component';
 import { ReservationHistoryRoutingModule } from './reservation-history-routing.module';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 @NgModule({
@@ -10,7 +12,9 @@ import { ReservationHistoryRoutingModule } from './reservation-history-routing.m
   ],
   imports: [
     CommonModule,
-    ReservationHistoryRoutingModule
+    ReservationHistoryRoutingModule,
+    MatListModule,
+    MatExpansionModule
   ]
 })
 export class ReservationHistoryModule { }

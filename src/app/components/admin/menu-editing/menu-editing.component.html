@@ -1,4 +1,4 @@
-<mat-expansion-panel hideToggle>
+<mat-expansion-panel [expanded]="true">
     <mat-expansion-panel-header>
         <mat-panel-title>
             Add Food
@@ -7,11 +7,11 @@
     <form action="" #form = "ngForm" (ngSubmit)="onSubmitForm(form)">
         <mat-form-field>
             <mat-label>Name</mat-label>
-            <input matInput name="title" ngModel>
+            <input matInput name="title" [(ngModel)]="title">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Course</mat-label>
-            <mat-select name = "course" ngModel>
+            <mat-select name = "course" [(ngModel)]="course">
                 <mat-option value="appetizer">Appetizer</mat-option>
                 <mat-option value="main">Main Dish</mat-option>
                 <mat-option value="dessert">Dessert</mat-option>
@@ -19,18 +19,18 @@
         </mat-form-field>
         <mat-form-field>
             <mat-label>Price</mat-label>
-            <input matInput name="price" ngModel>
+            <input matInput name="price" [(ngModel)]="price">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Available</mat-label>
-            <mat-select name = "available" ngModel>
+            <mat-select name = "available" [(ngModel)]="available">
                 <mat-option value="A">Available</mat-option>
                 <mat-option value="NA">N/A</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Description</mat-label>
-            <textarea rows="5" matInput name="description" ngModel></textarea>
+            <textarea rows="5" matInput name="description" [(ngModel)]="description"></textarea>
         </mat-form-field>
         <input type="file" name="image" (change)="onFileChange($event)" accept="image/*">
         <button mat-raised-button color="primary" type="submit">Submit</button>
