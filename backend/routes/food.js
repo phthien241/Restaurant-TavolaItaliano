@@ -6,13 +6,13 @@ const { Storage } = require("@google-cloud/storage");
 const path = require("path");
 
 const storage = new Storage({
-  projectId: "elite-elevator-399002",
+  projectId: "coherent-acre-321514",
   keyFilename: path.join(
     __dirname,
-    "../../elite-elevator-399002-1455674e2b8d.json"
+    "../../coherent-acre-321514-f7413b1461ce.json"
   ),
 });
-const bucketName = "tavola-italiano";
+const bucketName = "tavola-italiano-res";
 const bucket = storage.bucket(bucketName);
 
 const upload = multer({
@@ -77,7 +77,7 @@ router.post("/add-menu", upload.single("image"), async (req, res) => {
       createdFood.imageUrl =
         !imageUrl == ""
           ? imageUrl
-          : "https://storage.googleapis.com/tavola-italiano/defaultFoodImage.png";
+          : "https://storage.googleapis.com/tavola-italiano-res/defaultFoodImage.png";
       Food.create(createdFood);
     }
 
@@ -119,6 +119,18 @@ router.post("/add-menu", upload.single("image"), async (req, res) => {
   //       },
   //     });
   //   }
+});
+
+router.post("/delete", (req, res) => {
+  Food.destroy({
+    where: { title: req.body.name },
+  })
+    .then(() => {
+      res.status(200).send({ message: "Delete successfully" });
+    })
+    .catch((err) => {
+      res.status(400).send({ message: "Error in deleting food" });
+    });
 });
 
 module.exports = router;

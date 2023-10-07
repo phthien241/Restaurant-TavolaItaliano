@@ -13,6 +13,7 @@ export class HomepageComponent {
   constructor(private authService: AuthService){}
   signUp(form: NgForm){
     this.authService.signUp(form.value.email, form.value.password, form.value.firstName, form.value.lastName);
+    form.reset();
   }
   ngOnInit() {
     initTE({ Carousel,Ripple, Input });

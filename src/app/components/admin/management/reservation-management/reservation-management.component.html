@@ -1,7 +1,7 @@
 <div>
     <mat-form-field>
         <mat-label>Choose a date</mat-label>
-        <input [(ngModel)]="selectedDate" matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" (dateChange)="dateChanged()">
+        <input [(ngModel)]="selectedDate" matInput [matDatepicker]="picker" (dateChange)="dateChanged()">
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { MenuRoutingModule } from './menu-routing.module';
 import {HttpClientModule} from '@angular/common/http';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     CommonModule,
     MenuRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule
   ]
 })
 export class MenuModule { }

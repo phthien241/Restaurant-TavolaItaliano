@@ -11,7 +11,6 @@ export class ReservationHistoryComponent implements OnInit {
   reservations: Reservation[]=[];
   constructor(private reservationService: ReservationService){}
   ngOnInit(): void {
-    console.log(localStorage.getItem("email"));
       this.reservationService.getReservationUser(localStorage.getItem("email"));
       this.reservationService.getReservationUpdatedListener().subscribe({
         next: response=>{

@@ -27,7 +27,6 @@ export class MenuEditingComponent implements OnInit {
         this.menuService.getFoodInformation(food);
         this.menuService.getDishUpdatedListener().subscribe({
           next: response=>{
-            console.log(response);
             this.title=response.title;
             this.course = response.course;
             this.price = response.price;
@@ -44,7 +43,6 @@ export class MenuEditingComponent implements OnInit {
   
   onSubmitForm(form: NgForm){
     let formData = new FormData();
-    
     let isValid;
     if(form.value.available==="A"){
       isValid = true;
@@ -52,7 +50,6 @@ export class MenuEditingComponent implements OnInit {
       isValid = false;
     }
     formData.append("title", form.value.title);
-    console.log(form.value.title);
     formData.append("description", form.value.description);
     formData.append("price", form.value.price);
     formData.append("isValid", isValid);

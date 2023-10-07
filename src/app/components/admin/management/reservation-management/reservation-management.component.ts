@@ -10,13 +10,10 @@ import { ReservationService } from 'src/app/services/reservation.service';
 })
 export class ReservationManagementComponent implements OnInit {
   reservations: Reservation[] = []
-  minDate: Date;
-  maxDate: Date;
   picker: Date;
   selectedDate: Date;
   branch: string;
   constructor(private reservationService: ReservationService, private router: Router, private route: ActivatedRoute) {
-    this.minDate = new Date();
     
   }
   ngOnInit(): void {

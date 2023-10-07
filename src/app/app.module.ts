@@ -10,12 +10,20 @@ import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { JwtHelperService, JWT_OPTIONS  } from '@auth0/angular-jwt';
+import { ErrorComponent } from './components/error/error.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomepageComponent
+    HomepageComponent,
+    ErrorComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,9 @@ import { JwtHelperService, JWT_OPTIONS  } from '@auth0/angular-jwt';
     FontAwesomeModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
