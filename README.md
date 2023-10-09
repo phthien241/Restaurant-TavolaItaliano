@@ -1,27 +1,63 @@
 # TavolaItaliano
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+Welcome to our Restaurant Website's repository! This is a simple place for everyone who loves our food. Here, you can check out our menu, book a table, and update your own profile. Enjoy! 🍽️🍷
 
-## Development server
+# Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Users:
 
-## Code scaffolding
+### Menu Exploration:
+- View our diverse range of dishes and specials.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Reservation:
+- Make a table reservation for your preferred date and time.
+Access your reservation history anytime.
 
-## Build
+### Profile Management:
+- Edit personal details for a tailored experience.
+Update your avatar to personalize your profile.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Authentication:
+- Secure sign in and sign up options.
+Auto login and auto logout features for convenience and security.
 
-## Running unit tests
+## Admin:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Menu Management: 
+- Add, update, or remove items from the menu to keep it fresh and current
 
-## Running end-to-end tests
+### Reservation Management: 
+- Oversee all reservations, manage timings, or make necessary updates.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Tech Stack & Libraries:
+This project is built using Angular, Tailwind CSS, Node.js, MySQL and a combination of popular libraries and middlewares and other technologies:
 
-## Further help
+- Express.js: Fast, unopinionated web application framework.
+- Mongoose: Elegant MongoDB object modeling for Node.js.
+- body-parser: Middleware to parse incoming request bodies.
+- cors: Middleware to enable CORS with various options.
+- multer: Middleware for handling multipart/form-data, which is primarily used for uploading files.
+- jsonwebtoken (JWT): An implementation of JSON Web Tokens.
+- crypto: Provides cryptographic functionality for secure data handling.
+- Tailwind CSS: Responsive front-end framework.
+- Angular Material: simple front-end interface for admin management.
+- Azure Database for MySQL: Hosting MySQL database.
+- Google Bucket: Storing images.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Getting Started
+
+## Clone the Repository:
+- git clone https://github.com/phthien241/Restaurant-TavolaItaliano
+- cd Travel-Website-Voyage-Vista
+## Install Dependencies:
+- npm install
+## Configuration:
+- Configure your own MySQL server in database file.
+## Start the Application:
+- run node server.js
+- run ng serve
+
+# Demo
+![Hero Section](images/screenshot1.png)
+![Login](images/screenshot2.png)
+![Menu](images/screenshot3.png)

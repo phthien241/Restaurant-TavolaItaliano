@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject, Subject } from 'rxjs';
+import { DialogComponent } from '../components/dialog/dialog.component';
 
 
 @Injectable({
@@ -12,7 +14,7 @@ export class AuthService {
   message: string = "";
   tokenExpired = new Subject<any>();
   firstNameChange = new Subject<any>();
-  constructor(private http: HttpClient, private router: Router, private jwtHelper: JwtHelperService) {
+  constructor(private http: HttpClient, private router: Router, private jwtHelper: JwtHelperService, private dialog: MatDialog) {
     if (localStorage.getItem("authToken")) {
       setTimeout(() => {
         this.tokenExpired.next({ expired: true });
@@ -36,6 +38,9 @@ export class AuthService {
       },
       error: err => {
         this.message = err.error.message;
+        this.dialog.open(DialogComponent,{
+          data:"FEmail already exists"
+        })
       },
       complete: () => {
 
@@ -43,6 +48,9 @@ export class AuthService {
     })
   }
   signIn(email: string, password: string) {
+    this.dialog.open(DialogComponent,{
+      data:"Please wait..."
+    })
     this.http.post<{ isAdmin: Boolean, imageUrl: string, message: string, token: string, firstName: string }>("http://localhost:3000/api/user/sign-in", { email: email, password: password }).subscribe({
       next: response => {
         localStorage.setItem("authToken", response.token);
@@ -57,9 +65,14 @@ export class AuthService {
         }, parseInt(localStorage.getItem("expiresIn")));
         this.firstNameChange.next({ fname: response.firstName, imageUrl: response.imageUrl });
         this.message = response.message;
+        this.dialog.closeAll();
       },
       error: err => {
         this.message = err.error.message;
+        this.dialog.closeAll();
+        this.dialog.open(DialogComponent,{
+          data:"FInvalid email or password"
+        })
       },
       complete: () => {
         this.router.navigate([""]);

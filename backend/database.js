@@ -2,10 +2,10 @@ const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize(
   "restaurant",
-  "huuthien241",
-  "Thapdienmaiphuc241!",
+  "username",
+  "password",
   {
-    host: "huuthien241.mysql.database.azure.com",
+    host: "host name",
     dialect: "mysql",
     ssl: "true",
     dialectOptions: {

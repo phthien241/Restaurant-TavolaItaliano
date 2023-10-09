@@ -8,13 +8,20 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: 'dialog.component.html',
 })
 export class DialogComponent {
-  success:Boolean
+  success:string
+  annoucement:string
   constructor(@Inject(MAT_DIALOG_DATA) public data: string) {
     if(data.substring(data.length-3)==="..."){
-      this.success = false;
+      this.success = "process";
+      this.annoucement=data;
     }else{
-      this.success = true;
+      if(data[0]=='F'){
+        this.success = "fail"
+        this.annoucement = data.substring(1);
+      }else{
+        this.success = "success"
+        this.annoucement=data
+      }
     }
-    
   }
 }
