@@ -1,4 +1,4 @@
-# TavolaItaliano
+# Tavola Italiano
 
 Welcome to our Restaurant Website's repository! This is a simple place for everyone who loves our food. Here, you can check out our menu, book a table, and update your own profile. Enjoy! 🍽️🍷
 
@@ -48,7 +48,7 @@ This project is built using Angular, Tailwind CSS, Node.js, MySQL and a combinat
 
 ## Clone the Repository:
 - git clone https://github.com/phthien241/Restaurant-TavolaItaliano
-- cd Travel-Website-Voyage-Vista
+- cd Restaurant-TavolaItaliano
 ## Install Dependencies:
 - npm install
 ## Configuration:
